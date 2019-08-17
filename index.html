@@ -30,8 +30,8 @@
       <section class="section">
         <div class="container">
           <div class="box main-chat-window">
-            <div class="notification" v-for="message in messages">
-              {{ message }}
+            <div class="notification" v-for="messageObject in messages">
+              {{ messageObject.message }}
             </div>
           </div>
         </div>
