@@ -12,6 +12,7 @@ var app = new Vue({
   methods: {
     enterNewMessage: function() {
       this.messages.push(this.newMessage);
+      this.newMessage = "";
     }
   }
 });
