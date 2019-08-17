@@ -13,6 +13,9 @@ var app = new Vue({
     enterNewMessage: function() {
       this.messages.push(this.newMessage);
       this.newMessage = "";
+    },
+    addToFirestore: function(newMessage) {
+      db.collection("messages").add();
     }
   }
 });
