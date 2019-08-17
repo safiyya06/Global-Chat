@@ -1,7 +1,12 @@
 var app = new Vue({
   el: "#app",
   data: {
-    messages: ["Hello World!", "Apa khabar?", "Khabar baik"],
+    messages: [
+      {
+        message: "this is an example message",
+        date: new Date()
+      }
+    ],
     newMessage: ""
   },
   methods: {
