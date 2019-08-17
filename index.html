@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>global chat</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <section class="section">
+        <div class="container has-text-centered">
+          <h1 class="title">Global Chats</h1>
+          <p class="subtitle">
+            Because talking to strangers is a <strong>good</strong> idea!
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="box main-chat-window">
+            <div class="notification" v-for="message in messages">
+              {{ message }}
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="container">
+          <input
+            v-model="newMessage"
+            v-on:keyup.enter="enterNewMessage"
+            class="input is-large"
+            type="text"
+            placeholder="Enter your message..."
+          />
+        </div>
+      </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
